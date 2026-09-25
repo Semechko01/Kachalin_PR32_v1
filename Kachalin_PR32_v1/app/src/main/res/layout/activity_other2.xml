@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtherActivity2">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp">
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="55dp"
+            android:text="@string/creadit"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            ></TextView>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="490dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginLeft="-355dp"
+            android:background="@color/green">
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/slider_background">
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/howmuch"
+                android:textColor="@color/black"
+                android:textSize ="18sp"
+                android:textStyle="bold"></TextView>
+            <com.google.android.material.slider.Slider
+                android:id = "@+id/myslider"
+                android:layout_width="340dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:valueTo="30000.0"
+                android:valueFrom="100000.0"
+                android:value = "50000.0"
+                android:stepsize = "1000.0"></com.google.android.material.slider.Slider>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="47dp"
+                android:text="@string/ot"
+                android:textColor="@color/black"
+                android:textSize ="14sp"></TextView>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="265dp"
+                android:layout_marginTop="47dp"
+                android:text="@string/dod"
+                android:textColor="@color/black"
+                android:textSize ="14sp"></TextView>
+        </FrameLayout>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="170dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="115dp"
+                android:background="@drawable/edittext1"
+                android:hint="@string/ved"
+                android:textSize="13sp"
+                android:textAlignment="center"></androidx.appcompat.widget.AppCompatEditText>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="195dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/buttonreg"
+                android:text= "@string/raschet"
+                android:textColor="@color/white"
+                android:textSize="24sp"></androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="170dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginLeft="115dp"
+                android:background="@drawable/edittext1"
+                android:hint="@string/ved2"
+                android:textStyle="bold"
+                android:textColorHint="@color/black"
+                android:textSize="13sp"
+                android:textAlignment="center"></androidx.appcompat.widget.AppCompatEditText>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Kachalin_PR-32_v1</string>
+    <string name="registr">Регистрация</string>
+    <string name="registr2">Введите ваш логин и пароль</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="voity">Войти</string>
+    <string name="creadit">Кредитный калькулятор</string>
+    <string name="raschet">Рассчитать</string>
+    <string name="howmuch">Сколько вам нужно</string>
+    <string name="ot">от 30 000</string>
+    <string name="dod">до 100 000</string>
+    <string name="ved">введите срок кредита</string>
+    <string name="ved2">ежемесячный платеж</string>
+    <string name="sumcredit">Сумма кредита</string>
+    <string name="srokcredite">Срок кредита</string>
+</resources>
