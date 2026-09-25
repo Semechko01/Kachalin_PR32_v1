@@ -42,15 +42,15 @@
                 android:textSize ="18sp"
                 android:textStyle="bold"></TextView>
             <com.google.android.material.slider.Slider
-                android:id = "@+id/myslider"
+                android:id="@+id/myslider"
                 android:layout_width="340dp"
                 android:layout_height="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="5dp"
-                android:valueTo="30000.0"
-                android:valueFrom="100000.0"
-                android:value = "50000.0"
-                android:stepsize = "1000.0"></com.google.android.material.slider.Slider>
+                android:valueFrom="10000.0"
+                android:valueTo="1000000.0"
+                android:value="50000.0"
+                android:stepSize="1000.0" />
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="20dp"
@@ -69,6 +69,7 @@
                 android:textSize ="14sp"></TextView>
         </FrameLayout>
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etTerm"
                 android:layout_width="170dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="130dp"
@@ -78,6 +79,7 @@
                 android:textSize="13sp"
                 android:textAlignment="center"></androidx.appcompat.widget.AppCompatEditText>
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCalculate"
                 android:layout_width="350dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="195dp"
@@ -87,6 +89,7 @@
                 android:textColor="@color/white"
                 android:textSize="24sp"></androidx.appcompat.widget.AppCompatButton>
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etResult"
                 android:layout_width="170dp"
                 android:layout_height="55dp"
                 android:layout_marginTop="300dp"
