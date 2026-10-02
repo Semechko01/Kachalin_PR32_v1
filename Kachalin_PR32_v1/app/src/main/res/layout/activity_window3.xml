@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="0dp"
+        android:background="@color/white">
         <TextView
             android:layout_width="300dp"
             android:layout_height="50dp"
@@ -34,35 +35,41 @@
             android:layout_marginLeft="70dp"
             android:background="@drawable/slider_background">
             <TextView
+                android:id = "@+id/TextSumCredit"
                 android:layout_width="300dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="20dp"
                 android:text="@string/sumcredit"
                 android:textColor="@color/black"
-                android:textSize ="18sp"
+                android:textSize ="17sp"
                 android:textStyle="bold"></TextView>
         </FrameLayout>
             <androidx.appcompat.widget.AppCompatEditText
+                android:id = "@+id/TextSrokCredit"
                 android:layout_width="170dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="130dp"
                 android:layout_marginLeft="115dp"
                 android:background="@drawable/edittext1"
                 android:hint="@string/srokcredite"
+                android:textColor="@color/black"
                 android:textSize="13sp"
                 android:textStyle="bold"
                 android:textAlignment="center"></androidx.appcompat.widget.AppCompatEditText>
             <androidx.appcompat.widget.AppCompatEditText
+                android:id = "@+id/TextEsheMes"
                 android:layout_width="270dp"
                 android:layout_height="68dp"
                 android:layout_marginTop="230dp"
                 android:layout_marginLeft="65dp"
                 android:background="@drawable/edittext1"
                 android:hint="@string/ved2"
+                android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:textAlignment="center"></androidx.appcompat.widget.AppCompatEditText>
             <androidx.appcompat.widget.AppCompatButton
+                android:id = "@+id/ButtonExit"
                 android:layout_width="350dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="375dp"

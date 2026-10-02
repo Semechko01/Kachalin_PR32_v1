@@ -1,19 +1,10 @@
-//package com.example.kachalin_pr_32_v1
-//
-//import androidx.appcompat.app.AppCompatActivity
-//import android.os.Bundle
-//
-//class MainActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//    }
-//}
+
 package com.example.kachalin_pr_32_v1
 
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -22,18 +13,12 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    companion object {
-        const val PREFS_NAME = "user_prefs"
-        const val KEY_LOGIN = "login"
-        const val KEY_PASSWORD = "password"
 
-        const val DEFAULT_LOGIN = "ects"
-        const val DEFAULT_PASSWORD = "ects2023"
-    }
 
     private lateinit var etLogin: EditText
     private lateinit var etPassword: EditText
     private lateinit var btnLogin: Button
+    private lateinit var prefs: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +27,13 @@ class MainActivity : AppCompatActivity() {
         etLogin = findViewById(R.id.etLogin)
         etPassword = findViewById(R.id.etPassword)
         btnLogin = findViewById(R.id.btnLogin)
+        prefs = getSharedPreferences("user", Context.MODE_PRIVATE)
+        val savedLogin = prefs.getString("login", null)
+        val savedPassword = prefs.getString("password", null)
 
+        if (savedLogin == "ects" && savedPassword == "ects2023") {
+            startActivity(Intent(this, OtherActivity2::class.java))
+        }
         btnLogin.setOnClickListener {
             handleLogin()
         }
@@ -57,35 +48,14 @@ class MainActivity : AppCompatActivity() {
             showAlert("Введите логин и пароль")
             return
         }
-
-        val prefs = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        val savedLogin = prefs.getString(KEY_LOGIN, null)
-        val savedPassword = prefs.getString(KEY_PASSWORD, null)
-
-        if (savedLogin == null || savedPassword == null) {
-            if (login == DEFAULT_LOGIN && password == DEFAULT_PASSWORD) {
-                prefs.edit()
-                    .putString(KEY_LOGIN, login)
-                    .putString(KEY_PASSWORD, password)
-                    .apply()
-                goToCalculator()
-            } else {
-                showAlert("Неверный логин или пароль")
-            }
-        } else {
-            if (login == savedLogin && password == savedPassword) {
-                goToCalculator()
-            } else {
-                showAlert("Неверный логин или пароль")
-            }
-        }
-    }
-
-    private fun goToCalculator() {
-        val intent = Intent(this, OtherActivity2::class.java)
-        startActivity(intent)
+        prefs.edit()
+            .putString("login", login)
+            .putString("password", password)
+            .apply()
+        startActivity(Intent(this, OtherActivity2::class.java))
 
     }
+
 
     private fun showAlert(message: String) {
         AlertDialog.Builder(this)

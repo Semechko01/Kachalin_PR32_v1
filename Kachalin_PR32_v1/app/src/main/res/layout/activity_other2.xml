@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp">
+        android:layout_marginTop="0dp"
+        android:background="@color/white">
         <TextView
             android:layout_width="300dp"
             android:layout_height="50dp"
@@ -44,11 +45,11 @@
             <com.google.android.material.slider.Slider
                 android:id="@+id/myslider"
                 android:layout_width="340dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
                 android:layout_marginLeft="5dp"
-                android:valueFrom="10000.0"
-                android:valueTo="1000000.0"
+                android:valueFrom="30000.0"
+                android:valueTo="100000.0"
                 android:value="50000.0"
                 android:stepSize="1000.0" />
             <TextView
@@ -76,6 +77,9 @@
                 android:layout_marginLeft="115dp"
                 android:background="@drawable/edittext1"
                 android:hint="@string/ved"
+                android:textColorHint="@color/black"
+                android:inputType="number"
+                android:textColor="@color/black"
                 android:textSize="13sp"
                 android:textAlignment="center"></androidx.appcompat.widget.AppCompatEditText>
             <androidx.appcompat.widget.AppCompatButton
@@ -97,6 +101,8 @@
                 android:background="@drawable/edittext1"
                 android:hint="@string/ved2"
                 android:textStyle="bold"
+                android:inputType="number"
+                android:textColor="@color/black"
                 android:textColorHint="@color/black"
                 android:textSize="13sp"
                 android:textAlignment="center"></androidx.appcompat.widget.AppCompatEditText>
